@@ -7,6 +7,7 @@ public class PlayerMPCallback : MonoBehaviour
     // Start is called before the first frame update
 
     private const string propertyName = "_GrayStrength";
+    private const string propertyName2 = "_ShakeStrength";
 
     [SerializeField]
     private GameObject filter;
@@ -25,7 +26,7 @@ public class PlayerMPCallback : MonoBehaviour
         if (material.HasProperty(propertyName))
         {
             material.SetFloat(propertyName, Mathf.Max(0, 1 - f - 0.2f));
-            Debug.Log(Mathf.Max(0, 1 - f - 0.2f));
+            material.SetFloat(propertyName2, Mathf.Max(0, 1 - f - 0.2f));
         }
         else
         {
@@ -40,6 +41,6 @@ public class PlayerMPCallback : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
