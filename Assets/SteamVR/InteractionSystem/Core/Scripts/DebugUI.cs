@@ -41,7 +41,7 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         private void OnGUI()
 		{
-            if (Debug.isDebugBuild)
+			if (Debug.isDebugBuild)
             {
                 player.Draw2DDebug();
             }
